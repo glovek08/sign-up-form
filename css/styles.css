@@ -1,5 +1,6 @@
 :root {
     --header-bg: #153347;
+    --header-font: #E4E6D4;
     --main-bg: #E2DCDE;
 }
 
@@ -27,30 +28,41 @@ body {
 }
 header {
     background: var(--header-bg);
+    color: var(--header-font);
     width: 100%;
     min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 3%;
+    z-index: 9;
 }
 main {
     background: var(--main-bg);
+    background-image: url("../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
     width: 100%;
     min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 footer {
+    color: var(--header-font);
     background: var(--header-bg);
     width: 100%;
     min-height: 100px;
+    z-index: 10;
 }
 #header-logo {
-    outline: 1px solid red;
     height: 50px;
     transition: transform 120ms;
 }
 #header-logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 #nav-ul {
   list-style: none;
@@ -63,5 +75,12 @@ footer {
     transition: transform 120ms;
 }
 .nav-link:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+#login-form {
+    width: clamp(400px, 50%, 90%);
+    min-height: 100%;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 }
