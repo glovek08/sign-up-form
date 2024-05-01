@@ -18,6 +18,24 @@
 	box-sizing: border-box;
 }
 
+.responsive-font-size {
+    width: clamp(45ch, 50%, 75ch);
+}
+html {
+	font-family:
+    system-ui,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+line-height: 1.15;
+-webkit-text-size-adjust: 100%;
+-moz-tab-size: 4;
+tab-size: 4;
+}
 img {
     display: block;
 }
