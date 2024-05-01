@@ -8,13 +8,14 @@
 :root {
     --header-bg: #153347;
     --header-font: #E4E6D4;
-    --main-bg: #E2DCDE;
+    --main-bg: #232426;
+    --main-font: #E2DCDE;
 }
 
 *,
-*::before,
-*::after {
-    box-sizing: border-box;
+::before,
+::after {
+	box-sizing: border-box;
 }
 
 img {
@@ -53,7 +54,7 @@ header {
 }
 
 main {
-    background: var(--main-bg);
+    background: black;
     background-image: url("../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,9 +106,10 @@ footer {
     min-height: 100%;
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    color: var(--main-bg);
+    color: var(--main-font);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Nunito, Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0 0 15px var(--main-bg);
 }
