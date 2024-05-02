@@ -159,7 +159,8 @@ footer {
     padding: 10px;
     outline: 1px solid green;   
     display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
+    /* grid-template-columns: repeat(auto-fill, 230px); */
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Adjusted to minmax */
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -203,6 +204,25 @@ footer {
     color: rgb(32, 32, 32);
     text-shadow: none;
 }
+#submit-grid-box {
+    outline: 1px solid violet;
+    padding: 20px 10px;
+    justify-self: center;
+    grid-column: span 2; /*Uses @media to span to a single column when the width is lower than 900px*/
+}
+#submit-btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    background: green;
+
+}
+
 .block {
     display: block;
 }
+@media screen and (max-width: 900px) {
+    #submit-grid-box {
+      grid-column: span 1; /* Change to span 1 for smaller screens */
+    }
+  }
