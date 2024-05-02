@@ -10,7 +10,8 @@
     --header-font: #E4E6D4;
     --main-bg: #232426;
     --main-font: #E2DCDE;
-    --main-font-shadow: rgb(19, 38, 57);
+    --main-font-shadow: rgba(0, 0, 0, 0.911);
+    --item-shadow: rgba(22, 41, 59, 0.421);
 }
 
 *,
@@ -50,6 +51,9 @@ a {
 a:visited {
     color: inherit;
 }
+input:invalid {
+    background: rgba(255, 0, 0, 0.205);
+}
 
 body {
     margin: 0;
@@ -65,7 +69,6 @@ header {
     background: var(--header-bg);
     color: var(--header-font);
     width: 100%;
-    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,8 +128,9 @@ footer {
 
 #login-form {
     width: clamp(400px, 60%, 90%);
-    height: clamp(400px, 60dvh, 90dvh);
-    backdrop-filter: blur(40px);
+    height: fit-content;
+    padding: 20px 5px 50px 5px;
+    backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(40px);
     color: var(--main-font);
     display: flex;
@@ -134,19 +138,22 @@ footer {
     justify-content: center;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 0 0 1.2rem var(--main-font-shadow);
+    text-shadow: 0 0 1.2rem var(--main-font-shadow) !important; /* Important is tagged to overwrite possible readability assistant */
+    border-radius: 5px; 
+    background: #3b3b3b34;
 }
 
 #login-form h1 {
     font-size: 2rem;
     padding: 10px 20px;
+    text-shadow: inherit;
 }
 
 #form-container {
     outline: 1px solid red;
     padding: 10px;
     width: clamp(300px, 520px, 90%); /* 300px = grid-item, 520px two grid-items, 90% of the container width */
-    height: 40%;
+    height: min(fit-content, 40%);
 }
 #form {
     padding: 10px;
@@ -160,12 +167,41 @@ footer {
 .grid-item {
     outline: 1px solid blue;
     padding: 5px;
+    margin-bottom: 10px;
 }
 .form-legend {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.911);
     margin-bottom: 5px;
+    margin-left: 10px;
 }
 .form-input {
     width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--main-font);
+    padding: 5px 8px;
+    background: rgba(74, 67, 67, 0.284);
+    color: var(--main-font);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 5px 10px var(--item-shadow);
+    text-shadow: 0 0 3px var(--main-font-shadow);
+    margin-bottom: 5px;
+}
+.input-small {
+    width: 90%;
+    min-height: 20px;
+    margin-left: 10px;
+    text-shadow: 0 0 3px var(--main-font-shadow);
+}
+.form-input::placeholder {
+    color: rgb(197, 197, 197);
+}
+.form-input:focus{
+    transform: scale(1.05);
+    outline: 2px solid #e3b261;
+    background: white;
+    color: rgb(32, 32, 32);
+    text-shadow: none;
 }
 .block {
     display: block;
