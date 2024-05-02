@@ -145,16 +145,17 @@ footer {
 #form-container {
     outline: 1px solid red;
     padding: 10px;
-    width: 60%;
+    width: clamp(300px, 520px, 90%); /* 300px = grid-item, 520px two grid-items, 90% of the container width */
     height: 40%;
 }
 #form {
     padding: 10px;
     outline: 1px solid green;   
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 230px);
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 }
 .grid-item {
     outline: 1px solid blue;
