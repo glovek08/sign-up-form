@@ -39,7 +39,7 @@ html {
     -moz-tab-size: 4;
     tab-size: 4;
     min-width: 100dvw;
-    height: 100%;
+    min-height: 100%;
     overflow: auto;
 }
 
@@ -52,13 +52,14 @@ a {
     color: #61dc75;
 }
 
+a:hover {
+    text-decoration: underline;
+}
 a:visited {
     color: #c988f7;
 }
 
-input:invalid {
-    background: rgba(255, 0, 0, 0.205);
-}
+
 
 body {
     margin: 0;
@@ -132,12 +133,12 @@ footer {
 }
 
 #login-form {
-    outline: 1px solid red;
-    width: clamp(700px, 60%, 1200px);
+    width: clamp(700px, 50%, 1200px);
     height: fit-content;
     margin: 5% 0;
-    padding: 20px 5px 50px 5px;
+    padding: 50px 5px 50px 5px;
     backdrop-filter: blur(100px);
+    box-shadow: 0 0 50px var(--item-shadow);
     -webkit-backdrop-filter: blur(40px);
     color: var(--main-font);
     display: flex;
@@ -145,8 +146,7 @@ footer {
     justify-content: center;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 0 0 1.2rem var(--main-font-shadow) !important;
-    /* Important is tagged to overwrite possible readability assistant */
+    text-shadow: 0 0 1.2rem var(--main-font-shadow) !important; /* Important in case it gets overwritten */
     border-radius: 5px;
     background: #3b3b3b34;
 }
@@ -154,12 +154,11 @@ footer {
 #login-form h1 {
     font-size: 2rem;
     padding: 10px 20px;
-    text-shadow: inherit;
     margin-bottom: 0;
+    text-shadow: 0px 0px 30px var(--main-font-shadow);
 }
 
 #form-container {
-    outline: 1px solid green;
     padding: 10px;
     max-width: 600px;
     /* 300px = grid-item, 520px two grid-items, 90% of the container width */
@@ -201,13 +200,10 @@ footer {
     text-shadow: 0 0 3px var(--main-font-shadow);
     margin-bottom: 5px;
 }
-
-.input-small {
-    width: 90%;
-    min-height: 20px;
-    margin-left: 10px;
-    text-shadow: 0 0 3px var(--main-font-shadow);
+.form-input:valid:not(#last-name) {
+    border: 1px solid rgb(0, 255, 0);
 }
+
 
 .form-input::placeholder {
     color: rgb(197, 197, 197);
@@ -216,10 +212,18 @@ footer {
 .form-input:focus {
     transform: scale(1.05);
     outline: 2px solid #e3b261;
-    background: white;
+    background: rgb(255, 255, 255);
     color: rgb(32, 32, 32);
     text-shadow: none;
 }
+
+.input-small {
+    width: 90%;
+    min-height: 20px;
+    margin-left: 10px;
+    text-shadow: 0 0 3px var(--main-font-shadow);
+}
+
 
 #submit-grid-box {
     padding: 20px 10px;
@@ -237,6 +241,11 @@ footer {
     border-radius: 5px;
     color: white;
     border: none;
+    cursor: pointer;
+}
+#submit-btn:hover {
+    background-color:#256b31;
+    outline: 2px solid rgb(178, 176, 176);
 }
 
 #odin-outline-logo {
