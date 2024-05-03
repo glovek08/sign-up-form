@@ -21,7 +21,7 @@
 }
 
 .responsive-font-size {
-    width: clamp(45ch, 50%, 75ch);
+    font-size: clamp(45ch, 50%, 75ch);
 }
 
 html {
@@ -148,7 +148,7 @@ footer {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 0 0 1.2rem var(--main-font-shadow) !important; /* Important in case it gets overwritten */
     border-radius: 5px;
-    background: #3b3b3b34;
+    background: #13243849;
 }
 
 #login-form h1 {
@@ -157,7 +157,19 @@ footer {
     margin-bottom: 0;
     text-shadow: 0px 0px 30px var(--main-font-shadow);
 }
-
+#form-text-container {
+    width: min(600px, 60%);
+    text-align: center;
+}
+#form-text-container ul {
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px;
+}
+#form-text-container ul li {
+    margin-bottom: 5px;
+}
 #form-container {
     padding: 10px;
     max-width: 600px;
@@ -179,6 +191,11 @@ footer {
     padding: 5px;
     margin-bottom: 10px;
     min-width: 300px;
+    outline: 1px solid blue;
+    min-height: 90px;
+}
+#blood-type {
+    text-align: center;
 }
 
 .form-legend {
@@ -200,10 +217,9 @@ footer {
     text-shadow: 0 0 3px var(--main-font-shadow);
     margin-bottom: 5px;
 }
-.form-input:valid:not(#last-name) {
+.form-input:valid:not(.optional) {
     border: 1px solid rgb(0, 255, 0);
 }
-
 
 .form-input::placeholder {
     color: rgb(197, 197, 197);
@@ -223,6 +239,7 @@ footer {
     margin-left: 10px;
     text-shadow: 0 0 3px var(--main-font-shadow);
 }
+
 
 
 #submit-grid-box {

@@ -30,36 +30,101 @@
     <main>
         <section id="login-form">
             <h1 class="resposive-font-size">SIGN UP</h1>
+            <div id="form-text-container" class="resposive-font-size">
+                <p>Subscribe today! Make yo mamma proud! Don't miss this chance!</p>
+                <ul>
+                    <li>NO NEWSLETTER</li>
+                    <li>MEET THE PRESIDENT</li>
+                    <li>F@$K THE POPO</li>
+                    <li>FREE LASAGNA!!!</li>
+                </ul>
+            </div>
             <div id="form-container">
                 <form id="form" method="POST">
                     <div class="grid-item">
                         <label for="first-name" class="form-legend block">First Name*</label>
-                        <input type="text" id="first-name" name="first-name" class="form-input resposive-font-size" maxlength="30" placeholder="Carl..." required/>
+                        <input type="text" id="first-name" name="first-name" class="form-input resposive-font-size"
+                            maxlength="30" placeholder="Carl..." required />
                         <small class="input-small">Required*</small>
                     </div>
                     <div class="grid-item">
                         <label for="last-name" class="form-legend block">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" class="form-input resposive-font-size" maxlength="30" placeholder="Johnson..." />
+                        <input type="text" id="last-name" name="last-name"
+                            class="form-input resposive-font-size optional" maxlength="30" placeholder="Johnson..." />
                         <small class="input-small">Optional</small>
                     </div>
                     <div class="grid-item">
                         <label for="email" class="form-legend block">Email*</label>
-                        <input type="email" id="email" name="email" class="form-input resposive-font-size" maxlength="30" placeholder="someone@email.com" required/>
+                        <input type="email" id="email" name="email" class="form-input resposive-font-size"
+                            maxlength="30" placeholder="someone@email.com" required />
                         <small class="input-small">Required*</small>
                     </div>
                     <div class="grid-item">
                         <label for="phone" class="form-legend block">Phone Number*</label>
-                        <input type="tel" id="phone" name="phone" class="form-input resposive-font-size" minlength="8" maxlength="20" placeholder="(555) 555-1234" required/>
+                        <input type="tel" id="phone" name="phone" class="form-input resposive-font-size" minlength="8"
+                            maxlength="20" placeholder="(555) 555-1234" required />
                         <small class="input-small">Required*</small>
                     </div>
                     <div class="grid-item">
+                        <label for="blood-type" class="form-legend block">Blood Type</label>
+                        <select name="blood-type" id="blood-type" class="form-input resposive-font-size optional">
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="Saiyan">Saiyan</option>
+                        </select>
+                        <small class="input-small">It's for the kids!</small>
+                    </div>
+                    <div class="grid-item">
+                        <label for="gender" class="form-legend block">Select Gender</label>
+                        <select name="gender" id="gender" class="form-input resposive-font-size optional">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="non-binary">Non-binary</option>
+                            <option value="black">Black</option>
+                            <option value="transgender">Transgender</option>
+                            <option value="genderqueer">Genderqueer</option>
+                            <option value="genderfluid">Genderfluid</option>
+                            <option value="agender">Agender</option>
+                            <option value="bigender">Bigender</option>
+                            <option value="cisgender_male">Cisgender Male</option>
+                            <option value="cisgender_female">Cisgender Female</option>
+                            <option value="demigender">Demigender</option>
+                            <option value="pangender">Pangender</option>
+                            <option value="gender-nonconforming">Gender Nonconforming</option>
+                            <option value="two-spirit">Two-Spirit</option>
+                            <option value="third_gender">Third Gender</option>
+                            <option value="androgyne">Androgyne</option>
+                            <option value="neutrois">Neutrois</option>
+                            <option value="gender-questioning">Gender Questioning</option>
+                            <option value="android1">Android Gen 1</option>
+                            <option value="android2">Android Gen 2</option>
+                            <option value="android3">Android Gen 3</option>
+                            <option value="gmo">GMO</option>
+                            <option value="ancient_god">Cthulhu Offspring</option>
+                            <option value="space_slug">Self-replicating silica-based Lifeform</option>
+                            <option value="vat_grown">VAT Grown</option>
+                            <option value="AI">Artifical Intelligence</option>
+                            <option value="Gay_AI">Gay Artifical Intelligence</option>
+                            <option value="borg_consciousness">b̶̨͚̗̫͍̺̦̠̥͈̺͉̩͔̜͂̊̉̚̚͠ǭ̷̡̮͎̠̺̝̮͍̥͇͎̲͓͐͜r̷̛̛̤͙̺͍̜̮̠̯̼̬͔̝̠̽̐̍͒͝ĝ̵̨̖̹̺̻̞̞̜̱͆̆́͒̓̔̍̇̑̊̕͝͝ ̸̢̨̮̥̤̖͚̟̌̉͑̔̑͌̓͂́ć̸̼̞̯͙̈́ṷ̸̟͈͕͕̪̟͉͙̜̟̈̌̄́̈͋͗͠b̷̨̰̣̫̻͚̘̍́̏̈́̾̅̊̕ē̵̲̈͌͊̕͠</option>
+                        </select>
+                        <small class="input-small">We value diversity</small>
+                    </div>
+                    <div class="grid-item">
                         <label for="user-password" class="form-legend block">Password*</label>
-                        <input type="password" id="user-password" name="user-password" class="form-input resposive-font-size" minlength="8" maxlength="30" required/>
+                        <input type="password" id="user-password" name="user-password"
+                            class="form-input resposive-font-size" minlength="8" maxlength="30" required />
                         <small class="input-small">Required* 8 to 30 characters</small>
                     </div>
                     <div class="grid-item">
                         <label for="user-password-confirm" class="form-legend block">Confirm Password*</label>
-                        <input type="password" id="user-password" name="user-password" class="form-input resposive-font-size" minlength="8" maxlength="30" required/>
+                        <input type="password" id="user-password" name="user-password"
+                            class="form-input resposive-font-size" minlength="8" maxlength="30" required />
                         <small class="input-small">Please repeat your password</small>
                     </div>
                     <div id="submit-grid-box" class="full-row">
@@ -68,13 +133,17 @@
                 </form>
             </div>
             <p class="center-aligned">Already have an account? <a href="#login-site">Log In</a>.</p>
+            <small><i>THIS IS A FICTIONAL SITE, DON'T SUBMIT PERSONAL DATA!</i></small>
         </section>
         <img src="assets/odin-lined.png" id="odin-outline-logo" alt="Odin Logo Outline" width="60" />
         <button id="test-btn">TEST</button>
     </main>
     <footer>
         <div id="credits">
-            Photo by <a href="https://unsplash.com/@kalenemsley?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kalen Emsley</a> on <a href="https://unsplash.com/photos/green-mountain-across-body-of-water-Bkci_8qcdvQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            Photo by <a
+                href="https://unsplash.com/@kalenemsley?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kalen
+                Emsley</a> on <a
+                href="https://unsplash.com/photos/green-mountain-across-body-of-water-Bkci_8qcdvQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
     </footer>
 </body>
