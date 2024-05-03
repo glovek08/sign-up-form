@@ -5,10 +5,17 @@ const phone = document.querySelector("#phone");
 const testBtn = document.querySelector("#test-btn");
 const userPassword = document.querySelector("#user-password");
 const userPasswordConfirm = document.querySelector("#user-password-confirm");
+const submitBtn = document.querySelector("#submit-btn");
+const tosCheckbox = document.querySelector("#tos-checkbox");
 const loginForm = document.querySelector("#form");
 
 loginForm.addEventListener("submit", (e) => {
     let formData = new FormData(loginForm);
+    if (!tosCheckbox.checked) {
+        alert("Please Accept the Terms of Service.");
+        e.preventDefault();
+        return;
+    }
     if (!validatePassword()) {
         e.preventDefault(); //Prevent form submission.
         return;
@@ -25,9 +32,9 @@ testBtn.addEventListener('click', () => {
     console.log('hello');
 })
 const validatePassword = () => {
-    const password = document.querySelector("#user-password").value;
-    const confirmPassword = document.querySelector("#user-password-confirm").value;
-    if (password !== confirmPassword) {
+    const password = document.querySelector("#user-password");
+    const confirmPassword = document.querySelector("#user-password-confirm");
+    if (password.value !== confirmPassword.value) {
         alert("Password do not match!");
         password.value = "";
         confirmPassword.value = "";
