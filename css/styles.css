@@ -55,6 +55,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 a:visited {
     color: #c988f7;
 }
@@ -78,7 +79,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3%;
+    padding: 0 5%;
     z-index: 9;
 }
 
@@ -117,10 +118,13 @@ footer {
 
 #nav-ul {
     list-style: none;
+    height: fit-content;
+    margin: 0;
 }
 
 #nav-ul li {
     list-style: none;
+    padding: 10px;
 }
 
 .nav-link {
@@ -146,7 +150,8 @@ footer {
     justify-content: center;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 0 0 1.2rem var(--main-font-shadow) !important; /* Important in case it gets overwritten */
+    text-shadow: 0 0 1.2rem var(--main-font-shadow) !important;
+    /* Important in case it gets overwritten */
     border-radius: 5px;
     background: #13243849;
 }
@@ -157,27 +162,34 @@ footer {
     margin-bottom: 0;
     text-shadow: 0px 0px 30px var(--main-font-shadow);
 }
+
 #form-text-container {
     width: min(600px, 60%);
     text-align: center;
+    margin-bottom: 10px;
 }
+
 #form-text-container ul {
     text-align: left;
     width: fit-content;
     margin: 0 auto;
     padding: 5px;
 }
+
 #form-text-container ul li {
     margin-bottom: 5px;
 }
+
 #form-container {
     padding: 10px;
     max-width: 600px;
     /* 300px = grid-item, 520px two grid-items, 90% of the container width */
     height: min(fit-content, 40%);
+    /* revise fit-content causing overflowing form */
 }
 
 #form {
+    /*overflowing, but seems to work.*/
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -191,9 +203,9 @@ footer {
     padding: 5px;
     margin-bottom: 10px;
     min-width: 300px;
-    outline: 1px solid blue;
     min-height: 90px;
 }
+
 #blood-type {
     text-align: center;
 }
@@ -216,7 +228,9 @@ footer {
     box-shadow: 2px 5px 10px var(--item-shadow);
     text-shadow: 0 0 3px var(--main-font-shadow);
     margin-bottom: 5px;
+    transition: 200ms;
 }
+
 .form-input:valid:not(.optional) {
     border: 1px solid rgb(0, 255, 0);
 }
@@ -240,8 +254,6 @@ footer {
     text-shadow: 0 0 3px var(--main-font-shadow);
 }
 
-
-
 #submit-grid-box {
     padding: 20px 10px;
     justify-self: center;
@@ -260,8 +272,9 @@ footer {
     border: none;
     cursor: pointer;
 }
+
 #submit-btn:hover {
-    background-color:#256b31;
+    background-color: #256b31;
     outline: 2px solid rgb(178, 176, 176);
 }
 
