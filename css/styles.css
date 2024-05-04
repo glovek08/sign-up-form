@@ -70,7 +70,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-width: 700px;
 }
 
 header {
@@ -130,7 +129,7 @@ main {
 }
 
 #login-form {
-    width: clamp(700px, 55%, 1200px);
+    width: min(90%, 800px);
     height: fit-content;
     margin: 5% 0;
     padding: 50px 5px 60px 5px;
@@ -175,7 +174,7 @@ main {
 
 #form-container {
     padding: 10px;
-    max-width: 600px;
+    width: min(100%, 600px);
     /* 300px = grid-item, 520px two grid-items, 90% of the container width */
     height: min(fit-content, 40%);
     /* revise fit-content causing overflowing form */
@@ -305,9 +304,12 @@ footer {
     gap: 2%;
     font-size: .8rem;
 }
-
+small#disclaimer {
+    padding: 10px 20px;
+    text-align: center;
+}
 .footer-flex-item {
-    width: 200px;
+    width: min(100px, 200px);
 }
 #footer-vertical-separator {
     width: 1px;
@@ -342,4 +344,28 @@ footer img {
     #password-fieldset {
         grid-column: span 1;
     } 
+}
+@media screen and (max-width: 400px) {
+    #login-form {
+        width: 100%;
+    }
+    #form {
+        background: green;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+    }
+    .grid-item {
+        min-width: 90%  ;
+    }
+    #password-fieldset {
+        grid-template-columns: span 1;
+        width: 90%;
+    }
+    .password-item {
+        width: 90%;
+    }
 }
