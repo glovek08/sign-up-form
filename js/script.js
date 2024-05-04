@@ -27,9 +27,6 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     return;
 });
-testBtn.addEventListener('click', () => {
-    console.log('hello');
-})
 const validatePassword = () => {
     const password = document.querySelector("#user-password");
     const confirmPassword = document.querySelector("#user-password-confirm");
