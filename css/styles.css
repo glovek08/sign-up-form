@@ -130,10 +130,10 @@ main {
 }
 
 #login-form {
-    width: clamp(700px, 50%, 1200px);
+    width: clamp(700px, 55%, 1200px);
     height: fit-content;
     margin: 5% 0;
-    padding: 50px 5px 50px 5px;
+    padding: 50px 5px 60px 5px;
     backdrop-filter: blur(100px);
     box-shadow: 0 0 50px var(--item-shadow);
     -webkit-backdrop-filter: blur(40px);
@@ -267,7 +267,7 @@ main {
     flex-direction: column;
     gap: 50px;
     grid-column: span 2;
-    /*Uses @media to span to a single column when the width is lower than 900px*/
+    /*Uses @media to span to a single column when the width is lower than 780px*/
 }
 
 #submit-btn {
@@ -288,9 +288,7 @@ main {
 }
 
 #odin-outline-logo {
-    background: -moz-radial-gradient(circle, rgba(1, 0, 11, 1) 7%, rgba(45, 51, 69, 0) 100%);
-    background: -webkit-radial-gradient(circle, rgba(1, 0, 11, 1) 7%, rgba(45, 51, 69, 0) 100%);
-    background: radial-gradient(circle, rgba(1, 0, 11, 1) 7%, rgba(45, 51, 69, 0) 100%);
+    filter: drop-shadow(0px 0px 2px rgb(242, 0, 255));
 }
 
 footer {
@@ -303,13 +301,13 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2% 0;
+    padding: 20px 0;
     gap: 2%;
+    font-size: .8rem;
 }
 
 .footer-flex-item {
     width: 200px;
-    outline: 1px solid blue;
 }
 #footer-vertical-separator {
     width: 1px;
@@ -317,7 +315,6 @@ footer {
     height: 60px;
 }
 #footer-icons-container {
-    outline: 1px solid red;
     display: flex
 }
 footer img {
@@ -325,10 +322,11 @@ footer img {
 }
 .footer-icons {
     padding: 10px;
-    transition: transform 200ms;
+    transition: 200ms;
 }
 .footer-icons:hover {
     transform: scale(1.1);
+    filter: drop-shadow(0 0 3px rgb(230, 0, 255));
 }
 .block {
     display: block;
@@ -340,7 +338,6 @@ footer img {
 @media screen and (max-width: 780px) {
     #submit-grid-box {
         grid-column: span 1;
-        /* Change to span 1 for smaller screens */
     }
     #password-fieldset {
         grid-column: span 1;

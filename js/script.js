@@ -2,7 +2,6 @@ const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
-const testBtn = document.querySelector("#test-btn");
 const userPassword = document.querySelector("#user-password");
 const userPasswordConfirm = document.querySelector("#user-password-confirm");
 const submitBtn = document.querySelector("#submit-btn");
